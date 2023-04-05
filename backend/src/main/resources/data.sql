@@ -27,3 +27,18 @@ INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prer
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capítulo 3', 'Testes com Spring', 3, 'image.png', 1, 2);
 
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2023-03-20T13:00:00Z', null, true, false);
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 1 do capítulo 1', 1, 1);
+INSERT INTO tb_content(id, text_Content, video_Uri) VALUES (1, 'Material de apoio 1', 'https://www.youtube.com/watch?v=xC_yKw3MYX4&ab_channel=DevSuperior');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 2 do capítulo 1', 2, 1);
+INSERT INTO tb_content(id, text_Content, video_Uri) VALUES (2, 'Material de apoio 2', 'https://www.youtube.com/watch?v=jh_T5_o3qKE&ab_channel=DevSuperior');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 3 do capítulo 1', 3, 1);
+INSERT INTO tb_content(id, text_Content, video_Uri) VALUES (3, 'Material de apoio 3', 'https://www.youtube.com/watch?v=ZaNVBhZUFIg&ab_channel=DevSuperior');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Tarefa do capítulo 1', 4, 1);
+INSERT INTO tb_task (id, description, question_Count, approval_Count, weight, due_Date) VALUES (4, 'CRUD com Spring', 5, 4, 1.0, TIMESTAMP WITH TIME ZONE '2023-05-12T21:00:00Z');
+
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1);
