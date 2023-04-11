@@ -30,6 +30,13 @@ public class User implements Serializable {
 
     }
 
+    public User(Long id, String name, String email, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
+
     public Long getId() {
         return id;
     }
@@ -66,8 +73,8 @@ public class User implements Serializable {
         return roles;
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
+    public List<Notification> getNotifications() {
+        return notifications;
     }
 
     @Override
